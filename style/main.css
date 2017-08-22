@@ -184,7 +184,6 @@ body {
     vertical-align: top;
     text-align: center; }
     .originalListContainer ul li, .shuffleListContainer ul li {
-      display: inline-block;
       padding-right: 10px;
       list-style: none;
       font-size: 12px;
