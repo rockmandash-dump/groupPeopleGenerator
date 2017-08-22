@@ -207,6 +207,25 @@ $( document ).ready(function() {
                 }
             })
         })
+
+        $('.originalListContainer li').on('click', function () {
+            var that = $(this)
+            that.toggleClass('clickedRed')
+            $('.shuffleListContainer li').each(function (index) {
+                if ( $(this).text() === that.text() ) {
+                    $(this).toggleClass('clickedRed')
+                }
+            })
+        })
+        $('.shuffleListContainer li').on('click', function () {
+            var that = $(this)
+            that.toggleClass('clickedRed')
+            $('.originalListContainer li').each(function (index) {
+                if ( $(this).text() === that.text() ) {
+                    $(this).toggleClass('clickedRed')
+                }
+            })
+        })
     }
 
     // ============================================================

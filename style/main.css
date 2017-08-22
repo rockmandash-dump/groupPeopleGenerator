@@ -196,5 +196,7 @@ body {
         padding-bottom: 40px; }
       .originalListContainer ul li.red, .shuffleListContainer ul li.red {
         color: red; }
+      .originalListContainer ul li.clickedRed, .shuffleListContainer ul li.clickedRed {
+        color: red; }
 
 /*# sourceMappingURL=main.css.map */
