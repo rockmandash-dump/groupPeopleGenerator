@@ -168,7 +168,45 @@ $( document ).ready(function() {
         $('.shuffleListContainer ul').sortable({
             connectWith: '.shuffleListContainer ul',
             items: 'li:not(:first-child)'
-        }).disableSelection()
+        })
+
+
+
+        $('.originalListContainer li').hover(function () {
+            var that = $(this)
+            that.addClass('red')
+            $('.shuffleListContainer li').each(function (index) {
+                if ( $(this).text() === that.text() ) {
+                    $(this).addClass('red')
+                }
+            })
+        }, function () {
+            var that = $(this)
+            that.removeClass('red')
+            $('.shuffleListContainer li').each(function (index) {
+                if ( $(this).text() === that.text() ) {
+                    $(this).removeClass('red')
+                }
+            })
+        })
+
+        $('.shuffleListContainer li').hover(function () {
+            var that = $(this)
+            that.addClass('red')
+            $('.originalListContainer li').each(function (index) {
+                if ( $(this).text() === that.text() ) {
+                    $(this).addClass('red')
+                }
+            })
+        }, function () {
+            var that = $(this)
+            that.removeClass('red')
+            $('.originalListContainer li').each(function (index) {
+                if ( $(this).text() === that.text() ) {
+                    $(this).removeClass('red')
+                }
+            })
+        })
     }
 
     // ============================================================

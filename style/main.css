@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url(vendor/normalize.min.css);
 @import url(partial/codemirror.min.css);
+@import url(partial/jquery-ui.min.css);
 [role="button"],
 input[type="submit"],
 input[type="reset"],
@@ -191,5 +192,7 @@ body {
         padding-bottom: 10px; }
       .originalListContainer ul li:last-child, .shuffleListContainer ul li:last-child {
         padding-bottom: 40px; }
+      .originalListContainer ul li.red, .shuffleListContainer ul li.red {
+        color: red; }
 
 /*# sourceMappingURL=main.css.map */
