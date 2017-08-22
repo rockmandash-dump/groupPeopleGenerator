@@ -1,0 +1,187 @@
+@import 'vendor/normalize.min.css';
+@import "mixin/_mixins.scss";
+@import "partial/_button.scss";
+@import "partial/codemirror.min.css";
+@import '../node_modules/susy/sass/susy';
+@import '../node_modules/susy/sass/plugins/svg-grid';
+
+$susy: (
+        'columns': susy-repeat(12),
+        'gutters': 0.25,
+        'spread': 'narrow',
+        'container-spread': 'narrow',
+);
+
+body {
+  font-family: 'Microsoft JhengHei', '微軟正黑體', 'Heiti TC', '儷黑 Pro', 'LiHei Pro', Arial, sans-serif;
+  padding-bottom: 1000px;
+}
+
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: #999;
+}
+
+.header {
+  width: 100%;
+  height: 70px;
+  text-align: center;
+  //background-color: #333;
+  @include before-middle();
+  span {
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+
+  }
+}
+
+.app {
+  position: relative;
+  width: 100%;
+  height: auto;
+
+  .groupLength {
+    font-size: 20px;
+
+    width: susy-span(4 of 12);
+    margin-left: susy-span(4 of 12) + gutter();
+    height: 40px;
+    border: 1px solid #333;
+    color: #333;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .generateList {
+    font-size: 20px;
+
+    width: susy-span(4 of 12);
+    margin-left: susy-span(4 of 12) + gutter();
+    height: 40px;
+    border: 1px solid #333;
+    color: #333;
+    cursor: pointer;
+    margin-top: 40px;
+    &:hover {
+      border: 1px solid #000;
+    }
+
+  }
+}
+
+.app-panel {
+  width: 100%;
+  height: auto;
+
+
+}
+
+.app-panel-grouplist {
+  float: left;
+  width: susy-span(4 of 12);
+  height: 400px;
+  border: 1px solid #000;
+
+  overflow-y: scroll;
+
+  .add {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 14px;
+    z-index: 1;
+    cursor: pointer;
+    &:hover {
+      color: red;
+    }
+  }
+
+  ul {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    li {
+      list-style: none;
+      width: 100%;
+      height: 60px;
+      background-color: #eee;
+      text-align: center;
+      cursor: pointer;
+
+      @include before-middle();
+      &:hover {
+        background-color: #ccc;
+      }
+      &.on {
+        background-color: #ccc;
+      }
+      .name {
+        font-size: 22px;
+        font-weight: bold;
+        margin-right: 10px;
+      }
+      .total {
+        font-size: 22px;
+        //margin-right: 10px;
+      }
+      .china {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.app-panel-codemirror {
+  float: right;
+  width: susy-span(8 of 12);
+  height: 400px;
+  border: 1px solid #000;
+
+  .saveList {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 10;
+    &:hover {
+      color: red;
+    }
+  }
+
+  > .CodeMirror {
+
+  }
+}
+
+
+.originalListContainer, .shuffleListContainer {
+  width: 100%;
+  height: auto;
+  margin-top: 60px;
+  ul {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: susy-span(3 of 12);
+    vertical-align: top;
+    text-align: center;
+    li {
+      list-style: none;
+      font-size: 16px;
+      padding-bottom: 5px;
+      &:nth-child(1) {
+        font-size: 25px;
+        padding-bottom: 10px;
+      }
+      &:last-child {
+        padding-bottom: 40px;
+
+      }
+    }
+  }
+
+}

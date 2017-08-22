@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分組產生器</title>
+    <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+
+<div class="header">
+    <div class="logo"><span>分組產生器</span></div>
+</div>
+
+<div class="app">
+    <div class="app-panel">
+        <div class="app-panel-grouplist">
+            <div class="add">增加一個</div>
+            <ul></ul>
+        </div>
+        <div class="app-panel-codemirror">
+            <button class="saveList">儲存</button>
+        </div>
+    </div>
+
+    <input class="groupLength" type="text" name="groupLength" placeholder="總共要幾組: ">
+    <button class="generateList">產生名單</button>
+    <div class="originalListContainer"></div>
+    <div class="divider"></div>
+    <div class="shuffleListContainer"></div>
+
+
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.28.0/codemirror.min.js"></script>
+<script src="script/main.js"></script>
+</body>
+</html>
