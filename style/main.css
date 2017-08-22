@@ -90,7 +90,7 @@ body {
     color: #333;
     text-align: center;
     margin-top: 40px; }
-  .app .generateList {
+  .app .generateList, .app .expandButton {
     font-size: 20px;
     width: 32.2033898305%;
     margin-left: 33.8983050847%;
@@ -99,7 +99,7 @@ body {
     color: #333;
     cursor: pointer;
     margin-top: 40px; }
-    .app .generateList:hover {
+    .app .generateList:hover, .app .expandButton:hover {
       border: 1px solid #000; }
 
 .app-panel {
@@ -184,6 +184,7 @@ body {
     vertical-align: top;
     text-align: center; }
     .originalListContainer ul li, .shuffleListContainer ul li {
+      display: inline;
       padding-right: 10px;
       list-style: none;
       font-size: 12px;
@@ -197,5 +198,7 @@ body {
         color: red; }
       .originalListContainer ul li.clickedRed, .shuffleListContainer ul li.clickedRed {
         color: red; }
+      .originalListContainer ul li.expand, .shuffleListContainer ul li.expand {
+        display: block; }
 
 /*# sourceMappingURL=main.css.map */

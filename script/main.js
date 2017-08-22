@@ -246,6 +246,12 @@ $( document ).ready(function() {
         generateList()
     })
 
+    $('.expandButton').on('click', function() {
+        $('.shuffleListContainer li').toggleClass('expand')
+        $('.originalListContainer li').toggleClass('expand')
+
+    })
+
 
     // ============================================================
     // main

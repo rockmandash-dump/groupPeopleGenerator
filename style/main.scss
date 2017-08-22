@@ -57,7 +57,8 @@ body {
     margin-top: 40px;
   }
 
-  .generateList {
+
+  .generateList, .expandButton {
     font-size: 20px;
 
     width: susy-span(4 of 12);
@@ -173,7 +174,7 @@ body {
     vertical-align: top;
     text-align: center;
     li {
-      //display: inline-block;
+      display: inline;
       padding-right: 10px;
       list-style: none;
       font-size: 12px;
@@ -192,6 +193,10 @@ body {
       &.clickedRed {
         color: red;
       }
+      &.expand {
+        display: block;
+      }
+
     }
   }
 
